@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CV Mobile - Cyril Delly</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .fond-animer {
+      background: linear-gradient(-45deg, #0f172a, #1e293b, #312e81, #111827);
+      background-size: 400% 400%;
+      animation: gradient 12s ease infinite;
+    }
+
+    @keyframes fade-in-up {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fade-in-down {
+      0% {opacity: 0; transform: translateY(-20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    .animate-fade-in-up {animation: fade-in-up 1s ease-out forwards;}
+    .animate-fade-in-down {animation: fade-in-down 1s ease-out forwards;}
+
+
+    @media (min-width: 1025px) {
+      body { display: none; }
+    }
+  </style>
+
+
+  <script>
+    if (window.innerWidth >= 1025) {
+      window.location.href = "index.html"; 
+    }
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1025) {
+        window.location.href = "index.html";
+      }
+    });
+  </script>
+</head>
+
+<body class="fond-animer text-white">
+  <main class="px-6 pt-10 pb-20 space-y-16">
+
+    <section id="profil" class="text-center">
+      <h1 class="text-4xl font-bold animate-fade-in-down">Cyril Delly</h1>
+      <div class="grid grid-cols-1 gap-6 mt-6">
+        <img src="/img/photo_profile2.jpg" alt="Photo" class="w-40 rounded-2xl shadow-lg mx-auto animate-fade-in-down">
+        <img src="/img/personnage1.png" alt="Avatar" class="w-40 mx-auto animate-fade-in-down">
+      </div>
+      <p class="italic text-lg mt-6 max-w-md mx-auto animate-fade-in-up">
+        Étudiant inscrit au Master of Sciences – Epitech (2025-2028), issu d’un BTS SIO (SLAM).
+        Passionné de développement full-stack, je recherche une alternance pour mettre en pratique mes acquis
+        et contribuer à des projets innovants.
+      </p>
+    </section>
+
+    <section id="formation" class="max-w-md mx-auto">
+      <h2 class="text-2xl font-semibold mb-4 text-center">Formations</h2>
+      <div class="space-y-4">
+        <div class="p-4 bg-white/10 rounded-lg">
+          <h3 class="font-medium">Bac Pro MELEC</h3>
+          <p class="text-sm text-white/70">2019 - 2022</p>
+          <p class="text-sm mt-1">Métiers de l’électricité et de ses environnements connectés</p>
+        </div>
+        <div class="p-4 bg-white/10 rounded-lg">
+          <h3 class="font-medium">BTS SIO (SLAM)</h3>
+          <p class="text-sm text-white/70">2022 - 2024</p>
+          <p class="text-sm mt-1">Services Informatiques aux Organisations - Développement</p>
+        </div>
+        <div class="p-4 bg-white/10 rounded-lg">
+          <h3 class="font-medium">Master of Sciences</h3>
+          <p class="text-sm text-white/70">2025 - 2028</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="competence" class="text-center">
+      <h2 class="text-2xl font-semibold mb-4">Compétences</h2>
+      <div class="grid grid-cols-3 gap-6 justify-items-center max-w-xs mx-auto">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 h-12">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-12 h-12">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 h-12">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-12 h-12">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-12 h-12">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-12 h-12">
+      </div>
+    </section>
+
+
+    <section id="experience" class="max-w-md mx-auto">
+      <h2 class="text-2xl font-semibold mb-4 text-center">Expériences</h2>
+      <div class="space-y-4">
+        <div class="p-4 bg-white/10 rounded-lg">
+          <h3 class="font-medium">Placidom</h3>
+          <p class="text-sm text-white/70">Janvier - Juin 2024</p>
+          <p class="text-sm mt-1">Comptage, rangement, facing, saisie des références.</p>
+        </div>
+        <div class="p-4 bg-white/10 rounded-lg">
+          <h3 class="font-medium">France Service (Stage)</h3>
+          <p class="text-sm text-white/70">Janvier 2024</p>
+          <p class="text-sm mt-1">Mise à jour de contenus, site Wordpress (DIVI).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projet" class="max-w-md mx-auto">
+      <h2 class="text-2xl font-semibold mb-4 text-center">Projets</h2>
+      <div class="p-4 bg-white/10 rounded-lg">
+        <h3 class="font-medium">Projet React + Vite</h3>
+        <p class="text-sm text-white/70">2024</p>
+        <p class="text-sm mt-1">Application compteur — composants fonctionnels et useState.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="max-w-md mx-auto">
+      <h2 class="text-2xl font-semibold mb-4 text-center">Contact</h2>
+      <form class="space-y-3">
+        <input class="w-full p-3 rounded bg-white/20 text-black" placeholder="Prénom" />
+        <input class="w-full p-3 rounded bg-white/20 text-black" placeholder="Nom" />
+        <input class="w-full p-3 rounded bg-white/20 text-black" placeholder="Email" />
+        <textarea class="w-full p-3 rounded bg-white/20 text-black" rows="4" placeholder="Message"></textarea>
+        <button class="w-full py-3 rounded bg-indigo-600 hover:bg-indigo-500">Envoyer</button>
+      </form>
+    </section>
+
+  </main>
+</body>
+</html>
